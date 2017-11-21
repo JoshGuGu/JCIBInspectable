@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JCIBInspectable_Example' do
+  pod 'JCIBInspectable', :path => '../'
+
+  target 'JCIBInspectable_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
