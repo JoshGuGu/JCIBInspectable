@@ -1,0 +1,6 @@
+framework module JCIBInspectable {
+  umbrella header "JCIBInspectable-umbrella.h"
+
+  export *
+  module * { export * }
+}

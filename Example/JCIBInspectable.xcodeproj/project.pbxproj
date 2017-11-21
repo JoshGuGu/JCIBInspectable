@@ -40,8 +40,8 @@
 		07BB58933EB937D35CC68A66 /* Pods-JCIBInspectable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCIBInspectable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCIBInspectable_Example/Pods-JCIBInspectable_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0961581697A172BB107BE2B2 /* Pods_JCIBInspectable_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCIBInspectable_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2C8ACAFF0BC183CAAD3F75 /* Pods-JCIBInspectable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCIBInspectable_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCIBInspectable_Tests/Pods-JCIBInspectable_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		10AA14BEF981456AE053686E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2378C24D833B00056B2D931D /* JCIBInspectable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JCIBInspectable.podspec; path = ../JCIBInspectable.podspec; sourceTree = "<group>"; };
+		10AA14BEF981456AE053686E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2378C24D833B00056B2D931D /* JCIBInspectable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JCIBInspectable.podspec; path = ../JCIBInspectable.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JCIBInspectable_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCIBInspectable_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,7 +64,7 @@
 		64DCB0EA1216086320B61006 /* Pods-JCIBInspectable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCIBInspectable_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCIBInspectable_Tests/Pods-JCIBInspectable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		738205647E9E4DD2D21F062F /* Pods-JCIBInspectable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCIBInspectable_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCIBInspectable_Example/Pods-JCIBInspectable_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7B330C202712B8ED542037C3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7B330C202712B8ED542037C3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E5CF03992C01204548CB8EC /* Pods_JCIBInspectable_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCIBInspectable_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -250,6 +250,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Josh Chen";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -536,12 +539,16 @@
 			baseConfigurationReference = 07BB58933EB937D35CC68A66 /* Pods-JCIBInspectable_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCIBInspectable/JCIBInspectable-Prefix.pch";
 				INFOPLIST_FILE = "JCIBInspectable/JCIBInspectable-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -551,12 +558,16 @@
 			baseConfigurationReference = 738205647E9E4DD2D21F062F /* Pods-JCIBInspectable_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCIBInspectable/JCIBInspectable-Prefix.pch";
 				INFOPLIST_FILE = "JCIBInspectable/JCIBInspectable-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

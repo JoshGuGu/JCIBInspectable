@@ -1,0 +1,6 @@
+framework module Pods_JCIBInspectable_Example {
+  umbrella header "Pods-JCIBInspectable_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
